@@ -1,0 +1,22 @@
+ <table>
+        <thead>
+          <tr>
+              <th>Factura</th>
+              <th>Serie</th>
+              <th>Folio</th>
+              <th>Fecha</th>
+              <th>Subtotal</th>
+              <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+            {{#each model as |factura|}}
+                <td>{{factura.id}}</td>
+                <td>{{factura.serie}}</td>
+                <td>{{factura.folio}}</td>
+                <td>{{factura.fecha}}</td>
+                <td>{{factura.subtotal}}</td>
+                <td>{{factura.total}}</td>
+            {{/each}}
+        </tbody>
+</table>

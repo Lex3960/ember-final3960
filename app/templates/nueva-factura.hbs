@@ -1,15 +1,14 @@
+<h3>Factura</h3>
+{{md-input type="text" label='Serie' class="col s6" validate=true value=model.serie}}
+{{md-input type="text" label='Folio' class="col s6" validate=true value=model.folio}}
 {{md-input type="date" label='Fecha' class="col s12" validate=true value=model.fecha}}
-
-Fecha: {{input type="date" value=model.fecha}}
-folio: {{input type="text" value=model.folio}}
-serie: {{input type="text" value=model.serie}}
-formaPago: {{input type="text" value=model.formaPago}}
-<br><br>
-<button {{action 'nuevoConcepto'}}>Añadir concepto</button>
+{{md-input type="text" label='Forma de pago' class="col s12" validate=true value=model.formaPago}}
+<hr>
+<h3>Conceptos</h3>
+<button {{action 'nuevoConcepto'}}>Agregar Concepto</button>
 
 {{#each model.conceptos as |concepto|}}
   {{form-concepto concepto=concepto}}
 {{/each}}
-
-<br><br>
-<button name="button" {{action 'guardar'}}>Guardar</button>
+<hr>
+<button name="button" {{action 'guardar'}}>Guardar Factura</button>

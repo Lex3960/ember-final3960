@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import sweetAlert from 'ember-sweetalert';
 
 export default Controller.extend({
     actions: {
@@ -6,7 +7,6 @@ export default Controller.extend({
           let factura = this.get('model');
           factura.save().then(()=>{
             Ember.RSVP.all( factura.get('conceptos').invoke('save') ).then(()=>{
-              //alert('se guardó c:');
             })        
           })
         },
