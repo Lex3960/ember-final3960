@@ -18,6 +18,16 @@ module.exports = function(environment) {
       }
     },
 
+    materializeDefaults: {
+      modalIsFooterFixed:  false,
+      buttonIconPosition:  'left',
+      loaderSize:          'big',
+      loaderMode:          'indeterminate',
+      modalContainerId:    'materialize-modal-root-element',
+      dropdownInDuration:  300,
+      dropdownOutDuration: 300
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -30,6 +40,14 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.firebase = {
+      apiKey: "AIzaSyCEDSYGyBxB10lhbOMuutoNwuFqaBRYjMQ",
+      authDomain: "exam-final3960.firebaseapp.com",
+      databaseURL: "https://exam-final3960.firebaseio.com",
+      projectId: "exam-final3960",
+      storageBucket: "exam-final3960.appspot.com",
+      messagingSenderId: "217100171241"
+    };
   }
 
   if (environment === 'test') {

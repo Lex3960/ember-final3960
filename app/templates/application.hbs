@@ -1,5 +1,27 @@
 {{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
+{{!--welcome-page--}}
 {{!-- Feel free to remove this! --}}
+
+{{!--#md-navbar name='Exam3960' class='indigo' homeRoute='navbar'}}
+  <!-- A workaround to get the "active" class
+    to apply to the active <li> automatically -->
+  {{#link-to 'nueva-factura' tagName='li'}}
+    {{link-to 'Nuva Factura' 'nueva factura'}}
+  {{/link-to}}
+{{/md-navbar--}}
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Exam3960 App</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+                {{#link-to 'nueva-factura'}}
+                Nueva Factura
+                {{/link-to}}
+            </li>
+        </ul>
+    </div>
+</nav>
+
 
 {{outlet}}

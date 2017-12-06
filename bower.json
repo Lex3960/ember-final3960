@@ -1,0 +1,7 @@
+{
+  "name": "ember-final3960",
+  "dependencies": {
+    "sweetalert2": "^6.1.0",
+    "materialize": "0.97.6"
+  }
+}
